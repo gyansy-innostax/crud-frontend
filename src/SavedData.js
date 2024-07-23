@@ -14,9 +14,6 @@ const SavedData = () => {
 
     const usersData = useSelector(state => state.userData);
 
-    const handleDelete = (user) => {
-        dispatch(deleteUsersData(user));
-    }
 
     return (
         <>
@@ -43,7 +40,7 @@ const SavedData = () => {
                                     <MdDeleteForever
                                         size="1.6rem"
                                         cursor="pointer"
-                                        onClick={() => handleDelete(user)}
+                                        onClick={() => dispatch(deleteUsersData(user))}
                                     />
                                 </td>
                                 <td>

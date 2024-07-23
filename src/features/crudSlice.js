@@ -11,7 +11,6 @@ export const fetchedAllData = createAsyncThunk(
     async () => {
         const res = await axios('http://localhost:3000/api/users')
         const data = await res.data;
-        console.log(data)
         return data
     }
 )
@@ -19,7 +18,6 @@ export const fetchedAllData = createAsyncThunk(
 export const updateUserData = createAsyncThunk(
     'user/updateUserData',
     async (user) => {
-        console.log(user)
         const config = { 'content-type': 'application/json' };
         const { _id } = user;
         axios.put(`http://localhost:3000/api/user/${_id}`,user,config)
@@ -42,7 +40,7 @@ export const addUserData = createAsyncThunk(
         const config = { 'content-type': 'application/json' };
         axios.post(`http://localhost:3000/api/users`,user, config)
             .then((res) => {
-                //console.log(res.data)
+                console.log(res.data)
             }).catch((e)=>console.log(e))
         return user
     }

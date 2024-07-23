@@ -23,12 +23,11 @@ const Form = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(user._id)
     if(user._id){
       dispatch(updateUserData(user))
-      console.log(user)
     }
     else {
+      delete user._id
       dispatch(addUserData(user))
     }
     setUser({_id:'',name:'',phone:'',email:''})
