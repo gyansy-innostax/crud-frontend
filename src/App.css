@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+.navbar-left {
+    margin-left: 20%;
+}
+
+.navbar-right {
+    margin-right: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h3 {
+    margin-left: 1rem;
+}
+
+.App {
+    font-family: sans-serif;
+    color: #071952;
+    text-align: center;
+}
+
+h1 {
+    color: #088395;
+}
+
+.nav {
+    background-color: aliceblue;
+}
